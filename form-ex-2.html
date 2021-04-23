@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        form{
+            /* margin: 0 auto; */
+            margin-left: 30%;
+            /* margin-right: ;
+            margin-top: ;
+            margin-bottom: ; */
+            margin: 10px 20px;
+        }
+        label{
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        #fname{
+            margin-left: 15px;
+        }
+
+        #password{
+            margin-left: 25px;
+        }
+
+        #email{
+            margin-left: 45px;
+        }
+
+        #age{
+            margin-left: 55px;
+        }
+
+        input{
+            margin-bottom: 10px;
+        }
+
+        fieldset, form{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <form autocomplete="on">
+
+        <fieldset>
+
+            <legend>Registration Form</legend>
+
+        <label for="fname">Full Name</label>
+        <input id="fname" size="50" pattern="[a-z]{3}" maxlength="10" placeholder="Full Name" minlength="4" type="text"> <br>
+        
+        <label for="password">Password</label>
+        <input id="password" type="password"> <br>
+
+        <label for="email">Email</label>
+        <input required type="email" name="email" id="email">
+       
+       <label style="margin-left: 30px;" for="">Birth Date</label>
+        <input type="date"> <br>
+
+
+        <label for="age">Age</label>
+        <input id="age" step="2" min="18" max="65" type="number">
+
+
+        <label for="phone">Phone Number</label>
+        <input placeholder="738 539 3346" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required maxlength="12" type="tel" name="phone" id="phone"> <br>
+
+
+<label for="tech">Technologies</label>
+<select>
+    <option value="java">Java</option>
+    <option value="html">HTML</option>
+    <option value="css">CSS</option>
+</select>
+
+
+
+<select>
+
+    <optgroup label="Backend">
+        <option value="java">Java</option>
+        <option value="spring">Spring</option>
+        <option value="db">Database</option>
+    </optgroup>
+
+    <optgroup label="Frontend">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">Javascript</option>
+    </optgroup>
+   
+</select>
+
+<label for="city">City</label>
+<input type="text" list="city">
+
+<datalist id="city">
+    <option value="pune">Pune</option>
+    <option value="delhi">Delhi</option>
+    <option value="banglore">Banglore</option>
+    <option value="hyderabad">Hyderabad</option>
+</datalist>
+<br>
+
+<label for="gender">Gender</label>
+<label for="male">Male</label>
+<input id="male" checked name="gender" type="radio">
+
+<label for="female">Female</label>
+<input id="female" name="gender" type="radio">
+
+
+<label for="others">Others</label>
+<input id="others" name="gender" type="radio"> <br>
+
+
+<label for="lang">Languages</label>
+<input type="checkbox" checked name="" id="">
+<label for="eng">English</label>
+
+<input type="checkbox" name="" id="">
+<label for="hindi">Hindi</label>
+
+<input type="checkbox" name="" id="">
+<label for="marathi">Marathi</label>
+
+<input type="button" value=""> <br>
+
+<input type="time" name="" id="">
+
+<input max="2021-04-30T16:30" type="datetime-local" name="" id="">
+
+
+<input accept="image/jpeg, image/png" type="file"> <br>
+
+
+
+<input type="text" >
+<label >Marks Obtained</label>
+
+
+<input type="text" value="100" disabled>
+<label>out of marks</label> <br>
+
+<textarea name="" id="" cols="30" rows="10">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore possimus deserunt quaerat, illum sunt incidunt eos consequuntur delectus eaque est doloribus eum, sapiente optio quod aspernatur aut, dolorum ipsam hic.
+</textarea>
+
+        <input value="Login" type="button">
+
+        <input type="submit">
+
+        <input type="reset">
+
+
+       
+
+        
+        <button type="button">Sign in</button>
+
+    </fieldset>
+    </form>
+</body>
+</html>
