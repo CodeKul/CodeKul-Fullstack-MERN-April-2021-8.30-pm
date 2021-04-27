@@ -50,16 +50,71 @@
     <form>
 
         <label for="fname">Full Name</label>
-        <input id="fname" type="text"> <br>
+        <input id="fname" maxlength="12" minlength="4" placeholder="Full Name" type="text"> <br>
 
         <label for="email">Email</label>
-        <input required id="email" type="email"> <br>
+        <input placeholder="xyz@example.com" required id="email" type="email"> <br>
 
         <label for="password">Password</label>
-        <input type="password" name="" id="">
+        <input type="password" name="" id=""> <br>
 
         <label for="age">Age</label>
-        <input type="number" name="" id="age">
+        <input min="18" max="70" type="number" name="" id="age"> <br> <br>
+
+
+        <label for="gender">Gender</label>
+        <input name="gender" type="radio">
+        <label for="male">Male</label>
+
+        <input name="gender" type="radio">
+        <label for="female">Female</label>
+
+        <input name="gender" type="radio">
+        <label for="other">Other</label>  <br> <br>
+
+
+        <select>
+          <option value="">Select Technologies</option>
+          <option value="java">Java</option>
+          <option value="spring">Spring</option>
+          <option value="database">Databse</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">Javascript</option>
+        </select>
+
+
+        <select name="" id="">
+          <optgroup label="Backend">
+            <option value="java">Java</option>
+          <option value="spring">Spring</option>
+          <option value="database">Databse</option>
+          </optgroup>
+
+          <optgroup label="Frontend">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">Javascript</option>
+          </optgroup>
+        </select> <br> <br>
+
+<label for="city">City</label>
+        <input type="text" list="city">
+
+        <datalist id="city">
+          <option value="Pune">Pune</option>
+          <option value="Mumbai">Mumbai</option>
+          <option>Banglore</option>
+          <option>Hyderabad</option>
+        </datalist>
+
+        <input type="date">
+
+        <input type="time" name="" id="">
+
+        <input type="datetime-local" name="" id="">
+
+
 
 
 
