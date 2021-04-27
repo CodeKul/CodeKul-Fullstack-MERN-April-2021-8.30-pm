@@ -151,3 +151,29 @@ p ~ span{
     color: greenyellow;
     background-color: hotpink;
 }
+
+a:link{
+    color: crimson;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:visited{
+    color: fuchsia;
+}
+
+a:hover{
+    color: gold;
+    font-size: larger;
+    font-style: italic;
+}
+
+a:active{
+    color: black;
+}
+
+span:hover{
+    background-color:darkred;
+    color: white;
+}
+
