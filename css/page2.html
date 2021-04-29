@@ -7,8 +7,7 @@
     <title>Document</title>
 
     <style>
-
-        /* .entertainment{
+      /* .entertainment{
             color: darkblue;
         }
 
@@ -31,13 +30,54 @@
 
       } */
 
-      ul{
+      ul {
         /* padding: 15px; */
         padding-top: 5px;
         padding-bottom: 10px;
         margin: 0;
       }
 
+      [class="Sports" i] {
+        background-color: blue;
+      }
+
+      [href="https://www.google.com"]
+      {
+        color: crimson;
+      }
+
+      /* ^ symbol is used when you want to target element on basis of its starting value */
+      /* 
+$ symbol is used when you want to target element on basis of its ending value */
+
+      /* [href^="https"]{
+  color: darkgreen;
+} */
+
+      /* * symbol is used when you want to target element on basis of its value present anywhere in the atrribute  */
+      [href*="gov"] {
+        color: yellow;
+        background-color: darkred;
+      }
+
+      /* [class~="red"]{
+  background-color: darkred;
+  color: white;
+} */
+
+      /* [class~="yellow-text"]{
+  color: yellow;
+} */
+
+      [class|="yellow"] {
+        color: yellow;
+      }
+
+      /* ~ symbol is used to target element whose attribute value is separated by whitespace */
+
+      /* [href$="https"]{
+  color: darkgreen;
+} */
 
       /* li {
         display: inline;
@@ -59,7 +99,7 @@
         color: olive;
       } */
 
-/* css selector */
+      /* css selector */
       /* whenever we use a float property for element it behaves as an inline element */
     </style>
   </head>
@@ -67,6 +107,16 @@
     <header>
       <h1>HTML 5 Semantic Elements</h1>
     </header>
+
+    <a href="https://www.google.com">Visit Google</a>
+
+    <a href="http://www.codekul.com">Visit Codekul</a>
+
+    <a href="https://www.cowin.gov.in">Visit Cowin</a>
+
+    <a href="https://www.bbc.com">Visit BBC</a>
+
+    <a href="https://www.indiapost.gov.in">Visit India Post</a>
 
     <nav>
       <ul>
@@ -78,7 +128,7 @@
     </nav>
 
     <main>
-      <section class="news">
+      <section class="news red yellow-text">
         <h2>News</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
@@ -87,6 +137,13 @@
           laudantium?
         </p>
       </section>
+
+      <div class="yellow-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro at
+        distinctio aut atque! Qui neque corrupti quia totam provident quo, porro
+        dolor obcaecati accusantium nulla consequuntur, exercitationem facilis
+        similique. Quo?
+      </div>
 
       <aside>
         <p>
