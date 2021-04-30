@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+    crossorigin="anonymous" />
+
+    <style>
+ 
+
+html, body{ 
+    margin: 0;
+    
+
+}
+
+        h1{
+            text-align: center;
+            color:black;
+            text-decoration: underline;
+            
+        }
+        ul{
+            display: inline;
+            
+        }
+
+        nav{
+            text-align: center;
+            /* margin: 20px; */
+             padding: 10px; 
+            background-color: black;
+            color:  white;
+            width: 100%;
+            font-weight: bold;
+            font-size:larger;
+            
+        }
+
+        select{
+            background-color: black;
+            color: white;
+            border: none;
+        }
+
+        a{
+            color: white;
+            margin-left: 2px;
+            text-decoration: none;
+            
+        }
+
+        .first h2{
+    color: grey;
+    margin-left: 15px;
+        }
+
+        .two h1 {
+            text-align: left;
+            color: grey;
+            margin-left: 15px;
+            position: relative;
+            top: inherit;
+        }
+.two a{
+    font-size: larger;
+    color: green;
+    font-weight: bolder;
+    margin-left: 40px;
+    
+
+}
+        /* .three h2{
+            color: red;
+            margin-left: 15px;
+        } */
+
+        .three h1{
+            text-align: left;
+            color: grey;
+            margin-left: 15px;
+        }
+        /* .three p{
+            
+            float: left;
+        }  */
+    #img1{
+        margin-left: 30px;
+        
+    }
+
+        #img2{
+            position: relative;
+            top: -177px;
+            margin-left: 7px;
+            
+        }
+
+        #img3{
+            position: relative;
+            left: 640px;
+            top: -174px;
+            margin-left: 0px;
+            
+            
+        }
+
+        #vid1{
+            position: relative;
+            left: -323px;
+            
+        }
+
+        #vid2{
+            position: relative;
+            right: -963px;
+            top: -354px;
+            margin-left: 25px;
+            
+        }
+
+        aside{
+            width: 400px;
+        float: right;
+
+        border-left: solid 5px blue;
+
+        padding: 10px;
+        font-style: italic;
+        color:brown;
+        font-weight: bold;
+        border-bottom-width: 200px;
+        }
+
+#aside2{
+    float: right;
+    padding: 10px;
+    margin-left: 4px;
+}
+.first{
+    height: 400px; ;
+}
+blockquote {
+    margin: 0;
+    display: inline;
+}
+
+blockquote {
+    padding: 15px;
+    background-color:skyblue;
+    border-radius: 5px;
+    width: 150px;
+    height: 200px;
+    text-shadow: 0px 2px 4px yellowgreen;
+    display: inline-block;
+  
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+
+a:link{
+   color: white;
+
+}
+       a:visited{
+           color: violet;
+       } 
+
+    
+a:hover{
+    color: orange;
+    font-size:x-large;
+    font-style: italic;
+}
+a:active{
+    color:skyblue;
+    background-color: black;
+}
+
+div a:visited{
+   
+           color:brown;
+       }
+
+#link2 a:link{
+    color: black;
+}
+
+#link2 a:visited{
+    color: blue;
+}
+
+#link2 a:hover{
+    color: green;
+    font-size:x-large;
+    font-style: italic;
+}
+#link2 a:active{
+    background-color: black;
+    color: chartreuse;
+}
+
+#link3 a:link{
+    color: black;
+}
+
+#link3 a:visited{
+    color: crimson;
+}
+#link3 a:hover{
+    color: cyan;
+}
+#link3 a:active{
+    background-color: black;
+    color: darkorange;
+}
+
+hr{
+    size: 5px;
+    color: darkgoldenrod;
+}
+    </style>
+</head>
+<body>
+    
+<header><h1>Practice Page
+
+</h1></header>
+<nav>
+ 
+    <ul><i class="fas fa-user"></i><a href="signin.html" target="_blank"> Sign in</a></ul>
+
+    <ul><a href="bbc.html" target="_self">Home</a>  </ul>
+    <ul><a href="home.html" target="_blank">News</a></ul>
+    <ul><a href="home.html" target="_blank">Sports</a></ul>
+    <ul><a href="home.html" target="_blank">Travel</a></ul>
+    <ul><a href="home.html" target="_blank">Culture</a></ul>
+    <ul>
+        
+        <label for="more">More</label>
+
+        <select name="more" id="">
+            <option value="      "></option>
+            <option value="Music">Music</option>
+            <option value="TV">TV</option>
+            <option value="Whether">Whether</option>
+            <option value="Sounds">Sounds</option>
+        </select>
+   </ul>
+   <ul><input type="text" placeholder="Search.."></ul>
+</nav>
+    
+
+
+<main>
+<section class="first">
+    <h2>Welcome</h2>
+    
+
+    <img src="https://images.unsplash.com/photo-1619059182960-c9fd4ea5e7cc?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="346.50" width="616"  alt="image" id="img1">
+    <img src="https://images.unsplash.com/photo-1585399000684-d2f72660f092?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" height="170" width="320" id="img2" alt="">
+    <embed src="https://www.youtube.com/embed/RciE68Q7PCA" title="YouTube video player" type="" id="vid1" height="170" width="320">
+    <embed src="https://www.youtube.com/embed/hq3yfQnllfQ" title="YouTube video player" type="" id="vid2" height="167" width="320">
+    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw1NXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" id="img3" alt="" height="170" width="320">
+    
+    <!-- <a href="https://bbc.com">BBC.com</a>  -->
+
+</section>
+<hr>
+<section class="two">
+<h1>News</h1>
+<div>
+<a href="https://www.google.com/search?q=covid+update&oq=covid+upda&aqs=chrome.0.0i131i433i457j69i57j0i402l2j0i131i433l2j0i131i395i433l4.17524j1j4&sourceid=chrome&ie=UTF-8">Covid Updates</a> <br>
+
+
+</div>
+<br>
+<div id="link2"><a href="https://www.google.com/search?q=covid+vaccine+update&oq=covid+vaccine+u&aqs=chrome.1.69i57j0i20i263i433j0i131i395i433j0i395i433j0i131i395i433j0i20i131i263i395i433i457j0i395i402l2j0i395j0i395i433.11045j1j7&sourceid=chrome&ie=UTF-8">Covid Vaccine Updates</a>
+
+</div>
+<br>
+<div id="link3">
+    <a href="https://www.bbc.com"> Visit BBC Breaking</a>
+
+</div>
+<br>
+
+<iframe src="https://www.esakal.com" frameborder="0"  height="300px" width="350px" style="margin-left: 50px;"><a href="https://www.esakal.com" target="_blank">Sakal</a></iframe>
+<iframe src="http://www.lokmat.com/" frameborder="0"  height="300px" width="350px" style="margin-left: 50px;"><a href="http://www.lokmat.com/" target="_blank" >Lokmat</a></iframe>
+<iframe src="https://www.bbc.com" frameborder="0"  height="300px" width="350px" style="margin-left: 50px;"><a href="https://www.bbc.com" target="_blank">BBC Breaking</a></iframe>
+
+
+</section>
+<hr>
+<br><br>
+<aside>
+    <p>“People throw stones at you and you convert them into milestones.”
+        -― Sachin Tendulkar
+    </p>
+    <p>“Don't stop chasing your dreams, because dreams do come true.”
+        ― Sachin Tendulkar</p>
+        <p></p>
+    
+</aside>
+
+<section class="three">
+    <h1>Sports</h1>
+    <h3 style="margin-left: 20px; color:darkorange">"Happy Birthday to Bharat Ratna Sachin Tendulkar Sir"</h3>
+<summary>
+<p style="margin-left: 20px;">
+    
+    Sachin Tendulkar, in full Sachin Ramesh Tendulkar, (born April 24, 1973,
+    Bombay [Mumbai], India), Indian professional cricket player,
+    considered by many to be one of the greatest batsmen of all time. 
+    In 2012 he became the first cricketer to score
+    100 centuries (100 runs in a single innings) in international play.
+    
+</p>
+</summary>
+
+<details style="margin-left: 5px;">
+    
+    <p style="margin-left: 20px; text-align: justify; margin-right: 30px;">
+    Although India was defeated in the semifinals of the 1996 World Cup, Tendulkar emerged as the tournament’s top run scorer, with 523 runs. In 1998 he was chosen for the Rajiv Gandhi Khel Ratna Award, the highest award given to an Indian athlete, for his outstanding performance in the 1997–98 season. India was defeated by Australia in the 1999 World Cup, failing to advance past the round of six, and was soundly defeated by both Australia and South Africa in series later that year. In the 2003 World Cup, however, Tendulkar helped his team advance as far as the finals. Though India was again defeated by Australia, Tendulkar, who averaged 60.2, was named the man of the tournament.
+</p>
+
+</details>
+
+<figure>
+    <blockquote  >
+        <p style="vertical-align: middle"> Gentleman, he is the best batsman I have ever seen in my life. And unlike most of you, I have seen bradman bat...</p>
+    </blockquote>
+    <figcaption>-John Woodcock</figcaption> 
+</figure>
+
+
+
+<figure style="margin-left: 400px; margin-top: -282px; " >
+    <blockquote>
+        <p style="vertical-align: middle;">Even if my grandchild will not remember the fact that I scored 10,000 runs in one day & test cricket. But they will surely talk about the fact that I was as team mate of Sachin Tendulkar 
+        </p>
+    </blockquote>
+    <figcaption>-Rahul Dravid</figcaption> 
+</figure>
+</section> <hr>
+<br><br>
+
+<section class="four" >
+    <h1 style="color: grey; text-align: left; margin-left: 15px;">Travel</h1>
+    <h3 style="margin-left: 20px; color: deeppink;">"Let's have Ganpati Darshan"</h3>
+
+    <p style="margin-left: 20px; font-weight: bolder;">1. Dagadusheth Halwai Ganpati <br><address style="margin-left: 20px;"> Ganpati Bhavan, 250, Chhatrapati Shivaji Maharaj Rd,<br> Budhwar Peth, Pune, Maharashtra 411002</address</p>
+
+</section><hr>
+<br><br>
+
+<aside id="aside2">
+    <img src="http://www.gyanipandit.com/wp-content/uploads/2017/05/Sant-Dnyaneshwar.jpg" alt="" height="200" width="370">
+</aside>
+<section class="five">
+    <h1 style="color: grey; text-align: left; margin-left: 15px;">Culture</h1>
+<article>
+
+    <h3 style="font-style: italic; font-weight: bolder;color:purple; text-decoration: underline; margin-left: 20px;">"The Great Philosopther Sant Dnyaneshwara"</h3>
+    
+    
+        <summary>
+    <p style="text-align: justify;margin-left: 20px; margin-right: 30px;">Dnyaneshwar was born in 1275 (on the auspicious day of Krishna Janmashtami) 
+        in a Marathi-speaking Deshastha Brahmin family in Apegaon village on the banks 
+        of Godavari river near Paithan in Maharashtra during the reign of the Yadava king Ramadevarava. ... 
+        Sant Dnyaneshwar, also referred to as Jnaneshwar, Jnanadeva, Dnyandev or Mauli was a 13th-century Indian Marathi saint, poet, philosopher and yogi of the Nath Vaishnava tradition. In his short life of 21 years,
+        he authored Dnyaneshwari and Amrutanubhav. Dnyaneshwar (or Jnandev) was one of the greatest saints of Maharashtra. Dnyaneshwar (Lord of Jnyana or knowledge) was the son of a saint turned householder named Vittalpanth whose father was the village accountant called Govindapanth. Dnyaneshwar had two brothers and a sister, Nivritti, Sopana and Muktabai.
+
+        Vittalpanth was a Sanskrit scholar and religious minded. He had always yearned to take Sanyas and attain self-realisation but was obliged to marry Rukmabai, daughter of Sridharpanth of Alandi. Yet his mind was for Sanyas and getting disgusted with worldly affairs he renounces the world and takes Sanyas from Sripad Yati (Ramananda Swami) at Varanasi. Rukmabai was filled with grief and could do nothing but only pray for his return.</p>
+    </summary>
+        <details style="margin-left: 5px;">
+            
+
+            <p style="margin-left: 20px; text-align: justify; margin-right: 30px;"> Nivritti (1273 A.D.), Jnandev (1275 A.D.) Sopan (1277 A.D.) and Muktabai (1279) were born to Vittalpanth and Rukmabai eventually. But, when the time came for performing the thread ceremony of the sons, the Brahmins refuse to perform it claiming children of a Sanyasin were prohibited by the scriptures to have thread ceremony.
+    
+    The only Prayaschitta for the parents was to give up their lives. As it is they were put to great hardships and humiliation by the Brahmins so they decide to end their lives in the hope that the Brahmins may out of pity perform the thread ceremony of their children.
+</p>
+
+</details>
+    
+        
+        <p style="color: blue; font-weight: bolder; font-style: oblique; margin-left: 20px;"><mark>  
+        Born: 1275, Apegaon
+        Died: 1296, Alandi
+        Guru: Nivruttinath (elder brother)
+        Literary works: Dnyaneshwari, Amrutanubhav, Changdev Paasashti, Haripath, abhang devotional poetry
+        Siblings: Muktabai, Nivruttinath, Sopan
+        Honors: Sant (Saint), Dev (God) and Māulī ..</mark></p>
+   
+        <cite style="margin-left: 20px;">https://en.wikipedia.org>wiki>Dnyaneshwar</cite>
+</article>
+
+</section><hr>
+<br>
+</main>
+
+<footer style="background-color: gray; margin: 20px;">
+   <h2 style="text-align: center; color:yellow; margin-bottom: 10px;">  Thanks for Visiting the Page</h2>
+</footer>
+<hr>
+</body>
+
+
+
+
+</html>

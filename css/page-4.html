@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        li{
+            display: inline;
+        }
+
+        header.bg-blue{
+            background-color: blue;
+        }
+
+        .f-white{
+            background-color: white;
+        }
+
+        #title{
+            font-size: x-large;
+            font-style: italic;
+            color: darkgoldenrod;
+            background-color: black;
+        }
+
+
+
+
+
+nav,header {
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: rgb(5, 139, 0);
+}
+
+section{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+        /* 1. one element can be part of different multiple classes 
+        2. one class can have diffrent multiple elements */
+    </style>
+</head>
+<body>
+    
+<button class="btn btn-custom"></button>
+
+    <header class="f-white bg-blue">
+        <h2>CSS Selectors</h2>
+    </header>
+
+    <nav class="bg-red">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <section class="news bg-red f-white">
+
+            <h2 id="title">City News</h2>
+<ol>
+    <li>Pune News</li>
+    <li>Mumbai News</li>
+    <li>Banglore News</li>
+    <li>Delhi News</li>
+</ol>
+
+
+<p style="vertical-align: middle;">codekul</p>
+        </section>
+    </main>
+
+
+    <script>
+        (function showMsg() {
+            console.log(a);
+            console.log("Hi welcome to javascript");
+        })();
+    </script>
+</body>
+</html>
