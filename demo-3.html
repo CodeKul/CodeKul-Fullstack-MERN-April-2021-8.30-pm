@@ -58,13 +58,13 @@ Inline level element occupies the space according to its content -->
 
 
 
-    <form>
+    <form autocomplete="on">
 
 <label for="fname">Full Name</label>
         <input maxlength="12" minlength="5" id="fname" type="text"> <br>
 
         <label for="email">Email</label>
-        <input required type="email" name="" id="email"> <br>
+        <input autocomplete="off" placeholder="example@xyz.com" required type="email" name="" id="email"> <br>
 
 
         <label for="password">Password</label>
@@ -75,7 +75,7 @@ Inline level element occupies the space according to its content -->
 
 
 
-        <select name="" id="">
+        <select multiple name="" id="">
 
           <option value="1">January</option>
           <option value="feb">February</option>
@@ -117,14 +117,74 @@ Inline level element occupies the space according to its content -->
           <option value="">Spring</option>
           <option value="">Database</option>
         </optgroup>
-        </select>
+        </select> <br> <br>
 
 
-        <input type="submit">
+        <label for="city">city</label>
+        <input type="text" list="city">
+
+        <datalist id="city">
+          <option>Pune</option>
+          <option>Mumbai</option>
+          <option>Banglore</option>
+          <option>Delhi</option>
+        </datalist>
+
+
+        <label for="gender">Gender</label>
+        
+        <input id="male" name="gender" type="radio">
+        <label for="male">Male</label>
+
+        <input id="female" name="gender" type="radio">
+        <label for="female">Female</label>
+
+        <input type="radio" name="gender" id="other">
+        <label for="other">Other</label> <br>
+
+        <label for="lang">Languages</label>
+        <input type="checkbox" name="" id="">
+        <label for="eng">English</label>
+        <input type="checkbox" name="" id="">
+        <label for="hindi">Hindi</label>
+        <input type="checkbox" name="" id="">
+        <label for="marathi">Marathi</label>
+
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="" id="">
+
+        <input type="time" name="" id=""> <br> 
+
+
+        <input type="datetime-local"> <br>
+
+        <input accept="application/pdf" type="file" name="" id="">
+
+        <input type="image" src="../images/img_submit.gif" alt=""> <br>
+
+        <input type="color" name="" id="">
+
+        <input type="month" name="" id="">
+
+        <input type="range" name="" id=""> 
+
+        <input type="search" name="" id="">
+
+        input
+
+
+        <input value="Sign up" type="submit">
         <button type="reset">Reset</button>
       <button type="button">Register</button>
         <button type="submit">Login</button>
 
     </form>
+
+
+    <!-- 
+    student registration form 
+    employee registration form 
+    ticket booking form (air-ticket/railway) -->
   </body>
 </html>
