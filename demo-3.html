@@ -60,8 +60,12 @@ Inline level element occupies the space according to its content -->
 
     <form autocomplete="on">
 
+      <fieldset>
+
+        <legend>Registration Form</legend>
+
 <label for="fname">Full Name</label>
-        <input maxlength="12" minlength="5" id="fname" type="text"> <br>
+        <input maxlength="12" pattern="[a-zA-Z]+" minlength="5" id="fname" type="text"> <br>
 
         <label for="email">Email</label>
         <input autocomplete="off" placeholder="example@xyz.com" required type="email" name="" id="email"> <br>
@@ -121,16 +125,17 @@ Inline level element occupies the space according to its content -->
 
 
         <label for="city">city</label>
-        <input type="text" list="city">
+        <input type="text" list="city"> <br>
 
         <datalist id="city">
           <option>Pune</option>
           <option>Mumbai</option>
           <option>Banglore</option>
           <option>Delhi</option>
-        </datalist>
+        </datalist> <br>
 
-
+<fieldset>
+  <legend style="margin-left: 25%;">Select Gender</legend>
         <label for="gender">Gender</label>
         
         <input id="male" name="gender" type="radio">
@@ -141,6 +146,9 @@ Inline level element occupies the space according to its content -->
 
         <input type="radio" name="gender" id="other">
         <label for="other">Other</label> <br>
+      </fieldset>
+
+    
 
         <label for="lang">Languages</label>
         <input type="checkbox" name="" id="">
@@ -169,15 +177,19 @@ Inline level element occupies the space according to its content -->
 
         <input type="range" name="" id=""> 
 
-        <input type="search" name="" id="">
+        <input type="search" name="" id=""> <br>
 
-        input
+        <label for="phone">Phone Number</label>
+        <input type="tel" placeholder="738-539-3346" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="" id="">
 
 
         <input value="Sign up" type="submit">
         <button type="reset">Reset</button>
       <button type="button">Register</button>
         <button type="submit">Login</button>
+
+
+      </fieldset>
 
     </form>
 
