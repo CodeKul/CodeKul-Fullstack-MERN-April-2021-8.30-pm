@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .element{
+            border: solid 2px blue;
+           position: absolute; 
+           left: 20px;
+           right: 0;
+           bottom: 20px;
+           padding: 25px;
+        }
+
+        .parent{
+            position: absolute;
+            border: solid 2px red;
+            padding: 25px;
+        }
+
+        .front, .back{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    
+   <div class="parent">
+
+    Parent Element
+       
+   </div>
+
+
+   <div class="element">
+    Child Element
+</div>
+
+
+  
+
+   <div style="background-color: yellow; z-index: -1;" class="back">
+
+   </div>
+
+   <div style="background-color: teal;" class="front">
+
+</div>
+</body>
+</html>
