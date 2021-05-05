@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 700px;
+            display: flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+
+            /* align-content: center; */
+            border: solid 2px black;
+            height: 600px;
+        }
+
+        /* read or search about align-content and align-items */
+
+        .flex-items{
+            border: solid 2px red;
+            height: 100px;
+            width: 100px;
+        }
+
+        .parent{
+            color:blue ;
+            height: 400px;
+        }
+
+        .child1{
+color:initial;
+        }
+
+        .child2{
+            color: lightcoral;
+        }
+.child1, .child2{
+    width: 200px;
+    height: 200px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="flex-items">One</div>
+        <div class="flex-items">Two</div>
+        <div class="flex-items">Three</div>
+
+        <div class="flex-items">One</div>
+        <div class="flex-items">Two</div>
+        <div class="flex-items">Three</div>
+
+
+        <div class="flex-items">One</div>
+        <div class="flex-items">Two</div>
+        <div class="flex-items">Three</div>
+        
+
+
+    </div>
+
+
+    <div class="parent">
+        <div class="child1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam id eaque debitis, numquam, cupiditate delectus, aspernatur itaque tenetur praesentium illum culpa explicabo? Libero earum, quasi quas at quaerat incidunt reiciendis.</div>
+        <div class="child2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis illo maxime voluptates harum excepturi. Sint blanditiis doloremque consequuntur adipisci consectetur praesentium dignissimos quo dolor hic modi. Perspiciatis accusantium enim molestiae?</div>
+    </div>
+</body>
+</html>
