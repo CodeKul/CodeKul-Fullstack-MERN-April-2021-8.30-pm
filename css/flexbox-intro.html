@@ -8,11 +8,13 @@
 
     <style>
         .container{
-            width: 700px;
+            /* width: 700px; */
             display: flex;
             flex-direction:row;
-            flex-wrap: wrap;
-            /* justify-content: center; */
+            /* flex-wrap: wrap; */
+            justify-content:center;
+
+            align-items: baseline;
 
             /* align-content: center; */
             border: solid 2px black;
@@ -21,10 +23,19 @@
 
         /* read or search about align-content and align-items */
 
+.three{
+   
+    height: 400px;
+}
+
         .flex-items{
+            margin-top: 50px;
             border: solid 2px red;
             height: 100px;
             width: 100px;
+            margin-bottom: 50px;
+            text-align: center;
+            padding: 25px;
         }
 
         .parent{
@@ -36,6 +47,16 @@
 color:initial;
         }
 
+        .two{
+         
+            height: 300px;
+        }
+
+        .one{
+          
+            height: 200px;
+        }
+
         .child2{
             color: lightcoral;
         }
@@ -44,23 +65,44 @@ color:initial;
     height: 200px;
 }
 
+p{
+    margin-top: 30px;
+    vertical-align: middle;
+}
+
+
+
     </style>
 </head>
 <body>
     <div class="container">
 
-        <div class="flex-items">One</div>
+        <div class="flex-items one"><p>One</p></div>
+        <div class="flex-items two"><p>two</p></div>
+        <div class="flex-items three"><p>three</p></div>
+
+        <div class="flex-items"><p>one</p></div>
+        <div class="flex-items two"><p>two</p></div>
+        <div class="flex-items three"><p>three</p></div>
+
+
+        <!-- <div class="flex-items">One</div>
         <div class="flex-items">Two</div>
         <div class="flex-items">Three</div>
+
 
         <div class="flex-items">One</div>
         <div class="flex-items">Two</div>
         <div class="flex-items">Three</div>
 
-
         <div class="flex-items">One</div>
         <div class="flex-items">Two</div>
-        <div class="flex-items">Three</div>
+        <div class="flex-items three">Three</div> -->
+
+
+        <!-- <div class="flex-items">One</div>
+        <div class="flex-items">Two</div>
+        <div class="flex-items">Three</div> -->
         
 
 
