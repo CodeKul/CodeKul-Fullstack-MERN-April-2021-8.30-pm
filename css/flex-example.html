@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+
+    <!-- what is the difference between inline and inline-block -->
+
+    <style>
+      .main-container {
+        display: flex;
+        border: solid 2px black;
+
+        height: 500px;
+      }
+
+      .flex-item-1 {
+        width: 400px;
+        height: 100%;
+        background-color: blue;
+      }
+
+      .flex-item-2 {
+          display: flex;
+        width: auto;
+        height: auto;
+        background-color: red;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+      }
+
+      .inner-flex-items{
+          width: 400px;
+          margin-top: 20px;
+      }
+
+      .one{
+          background-color: chartreuse;
+      }
+
+      .two{
+          background-color: darkgoldenrod;
+      }
+
+      .three{
+          background-color: darkorange;
+      }
+
+      .four{
+          background-color: deepskyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="flex-item-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quidem
+        accusantium debitis iste earum cum dolores! Exercitationem, aliquid
+        voluptas reiciendis reprehenderit tempora voluptatum, porro maiores
+        similique architecto ipsam corporis quisquam.
+      </div>
+
+      <div class="flex-item-2">
+       <div class="inner-flex-items one">One</div>
+       <div class="inner-flex-items two">Two</div>
+       <div class="inner-flex-items three">Three</div>
+       <div class="inner-flex-items four">Four</div>
+      </div>
+    </div>
+  </body>
+</html>
