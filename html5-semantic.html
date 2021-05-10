@@ -1,20 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <header>
+    <style>
+      li {
+        display: inline;
+        margin-right: 25px;
+      }
 
+      nav {
+        background-color: black;
+        color: white;
+        padding: 10px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+      }
+
+      aside {
+        width: 250px;
+        float: right;
+        color: cornflowerblue;
+        margin-top: 17px;
+      }
+
+      section {
+        width: 80%;
+      }
+
+      #news {
+        clear: both;
+      }
+
+      section h1 {
+        background-color: darkkhaki;
+      }
+
+      section h2 {
+        background-color: gray;
+      }
+
+      footer {
+        background-color: black;
+        color: white;
+        display: flex;
+        padding: 50px;
+        justify-content: space-around;
+      }
+
+      address {
+        font-style: normal;
+      }
+
+      * {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>HTML5 Semantic Elements</h1>
     </header>
 
-    <address>
+    <nav>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
 
-    </address>
+        <li><a href="">Services</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Blog</a></li>
+      </ul>
+    </nav>
 
-   
-</body>
+    <main>
+      <section id="sports">
+        <h2>Sports</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur
+          voluptas placeat quibusdam, culpa deleniti consequatur tempora ex
+          alias a quod veniam. Cumque eveniet maiores iusto laboriosam
+          dignissimos magni est.
+        </p>
+      </section>
+
+      <aside>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
+          quos nisi nostrum tenetur voluptatum temporibus cum deserunt omnis a
+          amet ratione soluta quas debitis cumque culpa, sunt aliquid nihil in?
+        </p>
+      </aside>
+
+      <section id="entertainment">
+        <h2>Entertainment</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+          corporis sequi, deleniti cupiditate ad praesentium deserunt tenetur
+          molestiae, obcaecati vero ea provident numquam. Eligendi nemo, vero
+          sunt dolore harum ab?
+        </p>
+      </section>
+      <section id="news">
+        <h2>News</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+          distinctio eaque. Eum nihil est, officia sed quaerat reiciendis ipsa
+          exercitationem aliquam, dolorem quia magni illum illo quibusdam iste
+          aut suscipit?
+        </p>
+      </section>
+      <section id="politics">
+        <h2>Politics</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          fuga error voluptates doloremque asperiores provident praesentium
+          incidunt magni, molestiae, tempora aut illum. Facilis reiciendis quo
+          ipsum iure a fugiat labore.
+        </p>
+      </section>
+
+      <section id="blog">
+        <h1>Blog</h1>
+        <article>
+          <h2>Article 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Praesentium ab itaque voluptatum, iusto in quo enim, cumque adipisci
+            nisi dolorum deserunt non odio? Sapiente minima culpa doloribus
+            omnis ipsam reiciendis.
+          </p>
+        </article>
+        <article>
+          <h2>Article 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Praesentium ab itaque voluptatum, iusto in quo enim, cumque adipisci
+            nisi dolorum deserunt non odio? Sapiente minima culpa doloribus
+            omnis ipsam reiciendis.
+          </p>
+        </article>
+        <article>
+          <h2>Article 3</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Praesentium ab itaque voluptatum, iusto in quo enim, cumque adipisci
+            nisi dolorum deserunt non odio? Sapiente minima culpa doloribus
+            omnis ipsam reiciendis.
+          </p>
+        </article>
+        <article>
+          <h2>Article 4</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Praesentium ab itaque voluptatum, iusto in quo enim, cumque adipisci
+            nisi dolorum deserunt non odio? Sapiente minima culpa doloribus
+            omnis ipsam reiciendis.
+          </p>
+
+          <cite>
+            <a href="https://www.wizardingworld.com/discover/books"
+              >The Harry potter book series
+            </a>
+          </cite>
+
+          <details>
+            <summary>Details</summary>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+            eveniet facere, consequuntur dignissimos temporibus suscipit
+            cupiditate molestias fuga harum commodi iure optio sequi aperiam
+            odit ipsam debitis dolore vitae molestiae.
+          </details>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Footer</p>
+      <address>"Bandal Capital" Kothrud, Pune</address>
+    </footer>
+  </body>
 </html>
