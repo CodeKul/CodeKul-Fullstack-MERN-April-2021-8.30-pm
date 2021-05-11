@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main-container {
+        display: grid;
+        grid-template-columns: 50% 25% 25%;
+        grid-template-rows: 25% 25%;
+        gap: 15px;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .one {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+
+      .main-container-2 {
+        display: grid;
+        grid-template-columns: 40% 20% 20% 20%;
+        grid-template-rows: 50% 25% 25%;
+      }
+
+      .two {
+        grid-column-start: 2;
+        grid-column-end: 5;
+      }
+
+      .main-container-2 .one {
+        grid-row: 1/4;
+      }
+
+      .main-container-2 .one div img{
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+      }
+
+      .main-container-2 .one div{
+          display: flex;
+          align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="grid-items one">
+        <img src="../images/3.jpg" alt="" />
+      </div>
+      <div class="grid-items">
+        <img src="../images/3.jpg" alt="" />
+      </div>
+      <div class="grid-items">
+        <img src="../images/3.jpg" alt="" />
+      </div>
+      <div class="grid-items">
+        <img src="../images/3.jpg" alt="" />
+      </div>
+
+      <div class="grid-items">
+        <img src="../images/3.jpg" alt="" />
+      </div>
+    </div>
+
+    <div class="main-container-2">
+      <div class="grid-items one">
+        <!-- <img src="../images/3.jpg" alt=""> -->
+
+        <h2>From our correspondents</h2>
+
+        <div>
+          <img src="../images/5.jpg" alt="" />
+          <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+        </div>
+        <div>
+            <img src="../images/5.jpg" alt="" />
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+        </div>
+        <div>
+            <img src="../images/5.jpg" alt="" />
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+        </div>
+        <div>
+            <img src="../images/5.jpg" alt="" />
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+        </div>
+        <div>
+            <img src="../images/5.jpg" alt="" />
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+        </div>
+        <div>
+            <img src="../images/5.jpg" alt="" />
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+        </div>
+        <div>
+            <img src="../images/5.jpg" alt="" />
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+        </div>
+        <div>
+            <img src="../images/5.jpg" alt="" />
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+        </div>
+      </div>
+      <div class="grid-items two">
+        <img src="../images/3.jpg" alt="" />
+      </div>
+      <div class="grid-items">
+        <img src="../images/3.jpg" alt="" />
+      </div>
+      <div class="grid-items">
+        <img src="../images/3.jpg" alt="" />
+      </div>
+      <div class="grid-items">
+        <img src="../images/3.jpg" alt="" />
+      </div>
+      <div class="grid-items">
+        <img src="../images/3.jpg" alt="" />
+      </div>
+      <div class="grid-items">
+        <img src="../images/3.jpg" alt="" />
+      </div>
+      <div class="grid-items">
+        <img src="../images/3.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
