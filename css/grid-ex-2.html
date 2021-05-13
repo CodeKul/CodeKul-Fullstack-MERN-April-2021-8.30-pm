@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+/* transform 
+transition
+keyframes and animation */
+
+      .main-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      iframe{
+          max-height: 100%;
+          /* max-width: 100%; */
+      }
+
+      .one p {
+        font-size: 29px;
+        font-weight: 700;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      .two {
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+
+      .one {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="grid-items one">
+        <img src="../images/4.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, sint
+        </p>
+      </div>
+      <div class="grid-items two">
+        <iframe src="flex-ex-2.html" height="850" frameborder="0"></iframe>
+      </div>
+      <div class="grid-items three">
+        <p>Advertisement</p>
+      </div>
+      <div class="grid-items four">
+        <img src="../images/4.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, sint
+        </p>
+      </div>
+      <div class="grid-items five">
+        <img src="../images/4.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, sint
+        </p>
+      </div>
+
+      <!-- <div class="grid-items six">
+        <img src="../images/4.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, sint
+        </p>
+      </div> -->
+
+      <div class="grid-items seven">
+        <iframe
+          width="150"
+          height="150"
+          src="https://www.youtube.com/embed/BNC6slYCj50"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>

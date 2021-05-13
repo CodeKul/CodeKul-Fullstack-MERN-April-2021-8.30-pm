@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main-container{
+            display: grid;
+            /* grid-template-columns: 100px 5fr 1fr 2fr 1fr; */
+            /* grid-template-columns: 100px 25% 50% 25% 25%; */
+
+            grid-template-columns: 100px repeat(4, 100px 1fr) 250px;
+
+            grid-template-columns: 100px minmax(200px, 600px);
+
+
+
+        }
+
+        .two{
+            background-color: blue;
+        }
+
+        .three{
+            background-color: crimson;
+        }
+
+        .four{
+            background-color: darkgoldenrod;
+        }
+
+        .five{
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="grid-items one">One</div>
+        <div class="grid-items two">Two</div>
+        <div class="grid-items three">Three</div>
+        <div class="grid-items four">Four</div>
+        <div class="grid-items five">Five</div>
+    </div>
+</body>
+</html>

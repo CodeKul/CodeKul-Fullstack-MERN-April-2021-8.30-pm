@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <style>
+       .main-container{
+           display: grid;
+           grid-template-columns: repeat(3, 1fr);
+           grid-template-rows: repeat(5, 50px);
+
+           width: 70%;
+
+           border: solid 2px black;
+
+           padding: 8px;
+       }
+
+      .main-container .one{
+           grid-column-start: 1;
+           grid-column-end: 4;
+       }
+
+       .main-container input{
+           width: 90%;
+       }
+
+      .main-container .two{
+           grid-column-start: 1;
+           grid-column-end: 3;
+
+
+           grid-row-start: 2;
+           grid-row-end: 3;
+       }
+
+       .main-container .ten{
+           grid-column-start: 1;
+           grid-column-end: 2;
+       }
+
+      .main-container .eleven{
+        grid-column-start: 2;
+           grid-column-end: 4;
+       }
+
+
+       .container{
+           display: grid;
+           grid-template-columns: 150px repeat(2, 300px);
+           grid-template-rows: repeat(8, 50px);
+           width: 70%;
+
+border: solid 2px black;
+
+padding: 8px;
+margin-top: 20px;
+       }
+
+       .container input[type="text"]{
+           width: 70%;
+       }
+
+       .container .three{
+           grid-row-start: 1;
+           grid-row-end: 4;
+
+
+           grid-column-start: 3;
+           grid-column-end: 4;
+       }
+
+       *{
+           margin: 0;
+       }
+
+       
+   </style>
+</head>
+<body>
+    
+
+    <div class="main-container">
+
+        <div class="grid-items one"><input type="text"></div>
+        <div class="grid-items two"><input type="text"></div>
+        <div class="grid-items three"><input type="text"></div>
+        <div class="grid-items four"><input type="text"></div>
+        <div class="grid-items five"><input type="text"></div>
+        <div class="grid-items six"><input type="text"></div>
+        <div class="grid-items seven"><input type="text"></div>
+
+
+        <div class="grid-items eight"><input type="text"></div>
+        <div class="grid-items nine"><input type="text"></div>
+        <div class="grid-items ten"><input type="text"></div>
+
+        <div class="grid-items eleven"><input type="text"></div>
+
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="grid-items one">
+            <label for="">First Name</label>
+           </div>
+        <div class="grid-items two"><input type="text"></div>
+        <div class="grid-items three">
+<div class="department">
+    <h2>Department</h2>
+   <input type="checkbox" name="" id="">  <label for="">Finance</label>  <br>
+   <input type="checkbox" name="" id="">  <label for="">Technology</label> <br>
+  <input type="checkbox" name="" id="">   <label for="">Accounts</label><br>
+</div>
+
+        </div>
+        <div class="grid-items four">
+            <label for="">Last Name</label>
+        </div>
+        <div class="grid-items five"><input type="text"></div>
+        <div class="grid-items six">
+            <label for="">Address</label>
+        </div>
+        <div class="grid-items seven"><input type="text"></div>
+
+
+        <div class="grid-items eight">
+            <label for="">Address 2</label>
+        </div>
+        <div class="grid-items nine"><input type="text"></div>
+        <div class="grid-items ten"><input type="text"></div>
+
+        <div class="grid-items eleven">
+            <label for="">City</label>
+        </div>
+
+        <div class="grid-items twelve">
+            <!-- <label for="">City</label> -->
+        </div>
+
+        <div class="grid-items thirteen">
+            <!-- <label for="">City</label> -->
+        </div>
+
+        <div class="grid-items fourteen">
+            <label for="">State</label>
+        </div>
+
+
+        <div class="grid-items eleven">
+           <input type="text" name="" id="">
+        </div>
+
+        <div class="grid-items eleven">
+            <label for="">Zip</label>
+        </div>
+
+    </div>
+</body>
+</html>
