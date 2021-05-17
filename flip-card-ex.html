@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .front-card {
+        background-color: darkred;
+        position: absolute;
+        /* z-index: 1; */
+        backface-visibility: hidden;
+      }
+
+      .back-card {
+        background-color: darkturquoise;
+        position: absolute;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+      }
+
+      .main-container{
+        perspective:1000px;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-card{
+        position: relative;
+    }
+
+      .main-container:hover .flip-card{
+transform: rotateY(180deg);
+      }
+    
+    
+
+      div {
+        height: 200px;
+        width: 200px;
+      }
+
+
+      /* .front-card:hover, .back-card:hover{
+          transform: rotateY(180deg);
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="flip-card">
+        <div class="front-card"></div>
+
+        <div class="back-card">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ad
+            nulla quisquam quam maxime veniam molestias ab explicabo eligendi
+            cum
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
