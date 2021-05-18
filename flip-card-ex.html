@@ -7,58 +7,61 @@
     <title>Document</title>
 
     <style>
-      .front-card {
-        background-color: darkred;
+      .post-wrap{
+        height: 400px;
+        width: 300px;
+        perspective: 1000px;
+      }
+
+      img{
+        background-size: cover;
+        height: 400px;
+        width: 300px;
+      }
+
+      .front, .back{
         position: absolute;
-        /* z-index: 1; */
+        height:400px ;
+        width: 300px;
         backface-visibility: hidden;
       }
 
-      .back-card {
-        background-color: darkturquoise;
-        position: absolute;
-        transform: rotateY(180deg);
-        backface-visibility: hidden;
+      .front{
+        background-color: blue;
       }
 
-      .main-container{
-        perspective:1000px;
-        transition: transform 1s;
+      post{
+        position: relative; /* REquired to absolutely position the faces */
+        height: 400px;
+        width: 300px;
         transform-style: preserve-3d;
-    }
-
-    .flip-card{
-        position: relative;
-    }
-
-      .main-container:hover .flip-card{
-transform: rotateY(180deg);
-      }
-    
-    
-
-      div {
-        height: 200px;
-        width: 200px;
+        transition: transform 2s;
       }
 
+      .back{
+        transform: rotateY(180deg);
+      }
 
-      /* .front-card:hover, .back-card:hover{
-          transform: rotateY(180deg);
-      } */
+      .post-wrap:hover .post{
+        transform: rotateY(180deg);
+      }
     </style>
   </head>
   <body>
     <div class="main-container">
-      <div class="flip-card">
-        <div class="front-card"></div>
-
-        <div class="back-card">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ad
-            nulla quisquam quam maxime veniam molestias ab explicabo eligendi
-            cum
-          </p>
+      <div class="post-wrap">
+        <div class="post">
+          <div class="front">
+            <!-- <img src="../images/5.jpg" alt="" /> -->
+          </div>
+          <div class="back">
+            
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit,
+              culpa nisi temporibus voluptate quae vero tempore explicabo
+              recusandae sit similique eum exercitationem obcaecati expedita
+              iure, nihil iste, laborum nostrum corporis.
+            
+          </div>
         </div>
       </div>
     </div>
