@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container, side-container{
+            display: inline-flex;
+
+        }
+
+        .container{
+            width: 60%;
+            flex-direction: row;
+        }
+
+        .side-container{
+            width: 30%;
+            flex-direction: column;
+        }
+
+        .flex-items{
+            /* width: 30%; */
+            border: solid 2px black;
+        }
+
+
+/* syntax -
+        @media screen/print/all/only/speech {
+            
+        } */
+
+        /* @media screen and (max-width: 992px) {
+
+            .container{
+                flex-direction: column;
+                background-color: black;
+                color: white;
+            }
+
+            .side-container{
+                width: 100%;
+                flex-direction: row;
+                background-color: darkred;
+                color: white;
+            }
+
+        } */
+
+
+        @media print {
+
+.container{
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    visibility: hidden;
+}
+
+.side-container{
+    width: 100%;
+    flex-direction: row;
+    background-color: darkred;
+    color: white;
+}
+
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Media Query</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="flex-items">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium saepe illum aut perspiciatis deleniti eum numquam vel, incidunt consectetur, dolor magni et commodi similique atque pariatur deserunt earum velit! Distinctio?</div>
+            <div class="flex-items">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium saepe illum aut perspiciatis deleniti eum numquam vel, incidunt consectetur, dolor magni et commodi similique atque pariatur deserunt earum velit! Distinctio?</div>
+            <div class="flex-items">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium saepe illum aut perspiciatis deleniti eum numquam vel, incidunt consectetur, dolor magni et commodi similique atque pariatur deserunt earum velit! Distinctio?</div>
+        </div>
+
+        <div class="side-container">
+            <div class="flex-items">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quae aliquid asperiores eaque quibusdam placeat aliquam autem iste, expedita libero esse tempore. Quidem illo sint veritatis dicta magni ea officia?</div>
+            <div class="flex-items">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quae aliquid asperiores eaque quibusdam placeat aliquam autem iste, expedita libero esse tempore. Quidem illo sint veritatis dicta magni ea officia?</div>
+        </div>
+    </main>
+</body>
+</html>
