@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      /* p::before {
+        content: "\247";
+      } */
+
+      p::first-letter {
+        font-size: xx-large;
+        color: blue;
+      }
+
+      p::first-line {
+        font-style: italic;
+        color: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordion" id="faq">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" data-bs-target="#q1" data-bs-toggle="collapse">Question 1</button>
+        </h2>
+
+        <div id="q1">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
+            iusto amet similique modi asperiores nesciunt accusantium rem eum
+            optio ea corporis nam minima necessitatibus, aliquid doloremque
+            autem quia nobis. Non.
+          </p>
+        </div>
+      </div>
+
+      <p>Hello</p>
+
+      <article>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam modi
+          a iusto minima quibusdam voluptate molestiae magnam est! Nulla ad
+          velit libero itaque iste! Aut quia quidem corrupti doloremque minus.
+        </p>
+      </article>
+
+      <form action="">
+        <input type="checkbox" checked name="" id="" /><input
+          type="checkbox"
+          name=""
+          id=""
+        /><input type="checkbox" name="" id="" /><input
+          type="checkbox"
+          name=""
+          id=""
+        />
+
+        <input type="radio" name="" id="" /><input
+          type="radio"
+          checked
+          name=""
+          id=""
+        /><input type="radio" name="" id="" /><input
+          type="radio"
+          name=""
+          id=""
+        />
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
