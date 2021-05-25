@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    
+
+    <script>
+
+// 1. return statement returns a value for a function i.e a function holds a value which is returned
+// 2. It stops the execution
+
+        // function addition () {
+        //     let a = 10;
+        //     let b = 25;
+
+        //     let c = a+b;
+
+        //     console.log("addition of a and b :" +c)
+
+            
+        //  return c;
+
+        //     document.write("addition of a and b : " + c)  //DOM
+
+            
+        // }
+
+        // addition();
+
+
+
+        function addition (a,b) {
+        //   let a;
+        //   let b;
+            let c = a+b;
+
+            console.log("addition of a and b :" +c)
+
+            
+         return c;
+
+            document.write("addition of a and b : " + c)  //DOM
+
+            
+        }
+
+        addition(20,45);
+
+        console.log(addition(20,45));
+
+
+
+        //variable function or function expression
+        // var add = function () {
+        //     let a = 20;
+        //     let b = 35;
+
+        //     let c = a+b;
+
+        //     console.log("addition of a and b :" +c)
+
+        //     document.write("addition of a and b : " + c)  //DOM
+
+        //     return c;
+        // }
+
+        // add();
+
+        add = (x,y) => {
+
+           
+
+            let c = x+y;
+
+            console.log("addition of a and b :" +c)
+
+            document.write("addition of a and b : " + c)  //DOM
+
+            return c;
+
+        }
+        console.log(add(50,60))
+
+
+        hello = value => "Hello,"+ value + " welcome to codekul";
+
+        document.getElementById("demo").innerHTML=hello("Sanket");
+
+        
+    </script>
+</body>
+</html>

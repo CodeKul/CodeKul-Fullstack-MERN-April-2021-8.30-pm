@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+      showData(21,32)
+
+        function showData (a,b) {
+        let c = a+b;
+        console.log("addition of a and b" + c)
+        }
+
+
+        //expression();
+
+        var expression = function () {
+            console.log("will this work ?")
+        }
+
+
+        //variable assignment over function declaration
+        var num = 22;
+        function num(x){
+            return (x*2)
+        }
+
+        console.log(typeof num)
+
+
+        //function declaration over variable declaration 
+
+        var num2;
+
+        function num2(y){
+            return (y*2)
+
+        }
+
+        console.log(typeof num2)
+
+
+        // // javascript functions and variables 
+        // 1. variable assignment takes a precedence over function declaration 
+        // 2. function declaration takes a precedence over variable declarations
+    </script>
+</body>
+</html>
