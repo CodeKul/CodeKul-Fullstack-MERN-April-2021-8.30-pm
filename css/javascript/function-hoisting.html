@@ -21,9 +21,18 @@
 
         //expression();
 
+        //expression();
+
         var expression = function () {
             console.log("will this work ?")
         }
+console.log(typeof(hello))
+//hello();
+        hello = () => {
+            console.log("Codekul")
+        }
+
+       
 
 
         //variable assignment over function declaration
@@ -45,6 +54,28 @@
         }
 
         console.log(typeof num2)
+
+
+        function parent () {
+
+            //declaration ignored, assignment of a string
+            var hoisted = "I am a variable";
+
+
+            //function declaration hoisted with the definition
+        function hoisted() {
+            return "I am a function;"
+        }
+
+        return hoisted();
+        }
+
+
+        console.log(parent())
+
+
+        //In the case of function declarations, the definitions are also hoisted
+        //at top
 
 
         // // javascript functions and variables 

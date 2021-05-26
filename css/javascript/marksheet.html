@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input id="fname" type="text">
+
+    <input id="lastname" type="text">
+
+    <button onclick=showData()>submit</button>
+
+
+    <p id="data"></p>
+
+
+    <script>
+        function showData() {
+            var firstName = document.getElementById("fname").value;
+            var lastName = document.getElementById("lastname").value;
+
+document.getElementById("data").innerHTML = firstName;
+
+            
+        }
+    </script>
+
+
+</body>
+</html>
