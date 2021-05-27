@@ -13,6 +13,11 @@
 
     <input id="lastname" type="text">
 
+
+    <input type="text" id="age">
+
+    <input type="text" id="num">
+
     <button onclick=showData()>submit</button>
 
 
@@ -23,6 +28,10 @@
         function showData() {
             var firstName = document.getElementById("fname").value;
             var lastName = document.getElementById("lastname").value;
+            var age = document.getElementById("age").value
+            var num = document.getElementById("num").value
+
+            console.log( parseInt(age) + parseInt(num))
 
 document.getElementById("data").innerHTML = firstName;
 
