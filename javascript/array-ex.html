@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students = ["Swati", "Jolly", "Ajinkya", "Vaishnavi", "Sneha"]
+
+        let data = ["Person name", 30, {city: "pune", profession: "SWE"}, [1,2,3,4]]
+
+        console.log("Hello" + students[3])
+        console.log(data)
+
+        console.log(students.indexOf("Jolly"))
+
+        let arr2 = students.join(":")
+
+        // array.join() using this method we can add a data for each element of defined array
+        // using array.join() gives output as string
+        console.log(arr2)
+
+
+        students.push("Milind")
+        console.log(students)
+
+        students.pop()
+        console.log(students)
+
+        students.pop()
+        console.log(students)
+
+
+        let a = students.shift()
+
+        // array.shift() removes the first array element and shifts the index position 
+        // i.e new array elements index will be shifted by one value
+  console.log(students)
+
+  console.log(students.indexOf("Jolly"))
+
+  students.unshift(100, "Sanket")
+
+//   array.unshift() adds the array element/ data in 0th or initial position 
+  console.log(students)
+
+//splice(index, noOfElements, newValues)
+  let spliced = students.splice(2, 2, "Swapnil", "Shweta")
+  console.log(spliced)
+  console.log(students)
+  </script>
+</body>
+</html>
