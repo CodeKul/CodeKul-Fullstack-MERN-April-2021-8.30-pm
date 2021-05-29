@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text">
+
+        <label for="lastName">Last Name</label>
+        <input id="lastName" type="text">
+
+        <label for="email">Email</label>
+        <input id="email" type="email">
+
+        <label for="password">Password</label>
+        <input id="password" type="password">
+
+
+        <button type="button" onclick=getData()>Get Data</button>
+    </form>
+
+
+    
+
+    <script>
+function getData() {
+    let firstName = document.getElementById("firstName").value
+    let lastName = document.getElementById("lastName").value
+    let email = document.getElementById("email").value
+    let password = document.getElementById("password").value
+
+
+    let data = [{
+        id: 1,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+    },{
+        id:2,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password, 
+    }, {
+        id:3,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+    }]
+
+
+    data.map((id, key) => {
+
+        `<table>
+            
+            
+            ${id.firstName}
+            
+            
+            <table>`
+
+    })
+
+    var table = document.createElement("table")
+
+    let row = document.createElement("tr")
+
+    table.appendChild(row)
+
+    let body = document.body
+
+    body.append(table)
+
+
+
+    let cell1 = document.createElement("th")
+
+    let cell2 = document.createElement("th")
+
+    let cell3 = document.createElement("th")
+
+
+    row.appendChild(cell1)
+    row.appendChild(cell2)
+    row.appendChild(cell3)
+
+    cell1.append("hello")
+
+}
+
+
+
+    </script>
+</body>
+</html>
