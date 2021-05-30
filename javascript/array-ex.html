@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        let students = ["Swati", "Jolly", "Ajinkya", "Vaishnavi", "Sneha"]
+        let students = ["Swati", "Jolly", "Ajinkya", "Vaishnavi", "Sneha", "Ajay", "Balkrishna", "Ravindra", "Akshay", "Akshaya" ]
 
         let data = ["Person name", 30, {city: "pune", profession: "SWE"}, [1,2,3,4]]
 
@@ -52,7 +52,7 @@
   console.log(spliced)
   console.log(students)
 
-  let numbers =[10,20,30,40]
+  let numbers =[70, 90, 110,20,10,50,30,40]
 
   let y = numbers.map((i) => i +5)
 
@@ -60,6 +60,34 @@
 
   let x = students.map((i) => i+"hi this is")
   console.log(x)
+
+  let reducer =( accumulator, currentValue) => accumulator * currentValue
+
+  // accumulator 
+  // current value 
+  // current index 
+  // source array
+ console.log( numbers.reduce(reducer) ) 
+
+
+ //array.reverse method reverses the position of elements
+ console.log(numbers.reverse())
+
+ console.log(numbers.sort())
+
+ numbers.sort (function compareNum (a,b) {
+   return a
+ })
+
+ console.log(numbers.sort())
+
+ 
+ console.log(students.sort())
+
+ //array.sort method returns the ascending 
+
+
+
   </script>
 </body>
 </html>

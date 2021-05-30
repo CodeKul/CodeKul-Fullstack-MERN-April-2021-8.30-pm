@@ -56,16 +56,33 @@ function getData() {
         password: password,
     }]
 
+    var dataTable = `
+    <tr>
 
-    data.map((id, key) => {
+<th>First Name</th>
 
-        `<table>
-            
-            
-            ${id.firstName}
-            
-            
-            <table>`
+    <th>Last Name</th>
+
+    <th>Email</th>
+
+</tr>   
+    
+    `
+
+
+    data.map((id) => {
+
+        dataTable += `
+        <tr>
+
+            <th>${id.firstName}</th>
+
+                <th>${id.lastName}</th>
+
+                <th>${id.email}</th>
+            </tr>` 
+
+       
 
     })
 
@@ -92,6 +109,7 @@ function getData() {
     row.appendChild(cell2)
     row.appendChild(cell3)
 
+    //cell1.appendChild("codekul")
     cell1.append("hello")
 
 }
