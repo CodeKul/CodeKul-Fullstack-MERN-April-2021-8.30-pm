@@ -12,6 +12,12 @@
 
         let data = ["Person name", 30, {city: "pune", profession: "SWE"}, [1,2,3,4]]
 
+        console.log(students)
+        students.copyWithin(1,4,7)
+console.log(students)
+
+
+
         console.log("Hello" + students[3])
         console.log(data)
 
@@ -85,6 +91,48 @@
  console.log(students.sort())
 
  //array.sort method returns the ascending 
+
+ let filterData = students.filter(students => students.length > 5)
+
+
+ let heroes = [
+   {name: "Batman", franchise: "DC"},
+   {name: "Ironman", franchise: "Marvel"},
+   {name: "Superman", franchise: "DC"},
+   {name: "Thor", franchise: "Marvel"},
+   
+ ];
+
+ let marvelHeroes = heroes.filter(function(hero) {
+   return hero.franchise == "Marvel";
+ })
+
+ console.log(marvelHeroes)
+
+//  let filterData2 = students.filter(function(name) {
+//    return  = "Bal"
+//  })
+
+ console.log(filterData);
+
+ //console.log(filterData2)
+let data1 = students.find(function(x) {
+  return x == "Shweta"
+})
+
+ console.log(data1)
+
+ let numbers1 = [10,20,-12,30,40, -5]
+
+ let found = numbers1.find(function(i) {
+   return i < 0
+ })
+
+ console.log(found)
+
+
+ //find method gives a specfic value(initial one only) 
+ // filter method gives  new array with values returned according to condition
 
 
 
