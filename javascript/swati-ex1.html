@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="inputbox">
+    <br />
+    <button type="button" id="submit">Submit</button>
+    <button type="button" id="display">Display</button>
+    <button type="button" id="evenodd" onclick="evenodd()">Show even odd</button>
+    <br />
+    <div id="screen"></div>
+    <div id="screen2"></div>
+    <div id="screen3"></div>
+
+
+
+    <script>
+        var inputArray = [];
+
+        var input = document.getElementById('inputbox');
+        var screen = document.getElementById('screen');
+
+        document.getElementById('submit').onclick = function () {
+            inputArray.push(input.value);
+            screen.innerHTML = input.value;
+
+
+        };
+        document.getElementById('display').onclick = function () {
+            // screen.innerHTML = inputArray;
+
+            document.getElementById("screen").innerHTML = "Array Elements are : " + inputArray;
+        };
+
+        function evenodd() {
+
+            var evens = [];
+            var odds = [];
+            
+            var newarray = inputArray;
+
+            for (var i = 0; i <= newarray.length; i++) {
+                if ((newarray[i] % 2) == 0) {
+                    evens.push(newarray[i]);
+                    document.getElementById("screen2").innerHTML = "Even numbers are : " + evens;
+                }
+                else {
+
+                    odds.push(newarray[i]);
+
+                    document.getElementById("screen3").innerHTML = "Odd numbers are : " + odds;
+                }
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

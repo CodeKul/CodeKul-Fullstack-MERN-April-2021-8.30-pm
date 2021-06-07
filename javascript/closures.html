@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function parent() {
+            let a = 10;
+            console.log("value of a :" + a)
+
+            function child() {
+                let b = 20;
+                let c = a+b
+
+                console.log("value of c" + c);
+                
+            }
+
+            return child;
+        }
+
+        let output = parent()
+
+        output()
+
+
+        function x() {
+            var p = 10;
+            function inner() {
+                return p;
+            }
+
+            return inner;
+        }
+
+        let get_inner_func = x()
+
+        console.log(get_inner_func())
+
+
+        //closures let you associate data (the data which is present in lexical environment)
+        //with a function that operates on that data
+
+
+
+        var counter = (function() {
+            var privateCounter =0
+
+function changeBy(val) {
+    privateCounter += val
+}
+
+return {
+    increment: function () {
+        changeBy(1)
+    },
+
+    decrement: function() {
+        changeBy(-1)
+    },
+
+    value: function() {
+        return privateCounter;
+    }
+};
+
+        })();
+
+        console.log(counter.value());
+
+        counter.increment();
+        console.log(counter.value())
+
+
+        
+
+    </script>
+</body>
+</html>

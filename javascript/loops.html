@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //do-while loop
+        //while loop
+        //for loop
+        //for-in loop
+        //for-of loop
+        //ForEach array method
+ var i=6;
+//         while(i<4) {
+//             console.log("Hi" +i)
+//             i++;
+//         }
+
+        do{
+            console.log("Hi " +i)
+            i++;
+        }while(i<4)
+
+        for(let j=0; j<=5; j++) {
+            console.log("Hi " +j)
+            
+        }
+
+        let numbers = [1,20,34,50,70,100]
+        for(let x=0; x<=numbers.length; x++) {
+            console.log(x)
+        }
+
+
+        //For-in loop
+
+        // syntax
+        // for (variableName in arrayName/object){
+        //     statements
+        // }
+
+        //forn-in loop is used for object and arrays
+        //for-of loop is used for arrays
+
+        //iterable object and enumerable object
+        for(a in numbers){
+            console.log("arrayelement" + a)
+        }
+
+        for(b of numbers) {
+            console.log("arrayelement :" + b)
+        }
+
+        console.log(numbers)
+
+        
+
+
+        let person ={
+            id:1,
+            name: "Sanket",
+            city: "Pune",
+            profession: "SWE",
+
+        }
+
+        console.log(person)
+
+        // {
+
+        // }
+
+        const colors = ["blue", "red", "green", "white"]
+
+        function iterate(item){
+            console.log(item);
+        }
+
+        colors.forEach(iterate)
+
+
+        
+    </script>
+</body>
+</html>
