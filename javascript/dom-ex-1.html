@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick=createTable()>create table</button>
+
+    <button onclick=createImage()>create image</button>
+
+    <button onclick=createParagraph()>create paragraph</button>
+
+
+    <button>Recreate Table</button>
+
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi velit impedit praesentium eius nobis, labore ullam nemo debitis, cumque aliquam at, culpa inventore blanditiis. Commodi quo rem nobis libero?</p>
+    </div>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi velit impedit praesentium eius nobis, labore ullam nemo debitis, cumque aliquam at, culpa inventore blanditiis. Commodi quo rem nobis libero?</p>
+    </div>
+
+    <div id="div3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi velit impedit praesentium eius nobis, labore ullam nemo debitis, cumque aliquam at, culpa inventore blanditiis. Commodi quo rem nobis libero?</p>
+    </div>
+    
+    <script>
+
+const body = document.body
+
+document.getElementById("div3").after(createTable())
+
+function createTable() {
+
+    var table = document.createElement("table");
+    var row = document.createElement("tr");
+
+    let taskHeadCell = document.createElement("th")
+    let scheduleHeadCell = document.createElement("th")
+
+    body.appendChild(table)
+
+    table.appendChild(row);
+
+    row.appendChild(taskHeadCell)
+
+    row.appendChild(scheduleHeadCell)
+
+
+    taskHeadCell.append("Task")
+
+    scheduleHeadCell.append("Schedule")
+
+
+
+
+
+
+}
+
+
+function createParagraph() {
+
+    var paragrapgh = document.createElement("p")
+    var para2 = document.createElement("p");
+
+    var link = document.createElement("a")
+
+    var href = document.createAttribute("href")
+
+
+   
+
+    body.append(paragrapgh)
+
+    body.append(para2)
+
+    paragrapgh.append("Codekul")
+
+    para2.appendChild(link)
+
+    //link.appendChild("Go To Codekul")
+
+    link.append("Go To Codekul")
+
+    link.setAttribute("href", "http://www.codekul.com")
+
+
+    
+
+    // append method append() 
+    // syntax - parentNode.append(childNode)
+
+}
+    </script>
+</body>
+</html>
