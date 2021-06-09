@@ -1,103 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h2>June 9, 2021</h2>
 
-    <button onclick=createTable()>create table</button>
+    <p id="pOne" style="color: blue" class="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+      reprehenderit odio fugit cumque veritatis, vero inventore harum temporibus
+      aliquam quaerat accusantium voluptatibus, suscipit libero delectus itaque
+      reiciendis officia aliquid culpa.
+    </p>
 
-    <button onclick=createImage()>create image</button>
+    <button onclick="createTable()">create table</button>
 
-    <button onclick=createParagraph()>create paragraph</button>
+    <button onclick="createImage()">create image</button>
 
+    <button onclick="createParagraph()">create paragraph</button>
 
     <button>Recreate Table</button>
 
-
     <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi velit impedit praesentium eius nobis, labore ullam nemo debitis, cumque aliquam at, culpa inventore blanditiis. Commodi quo rem nobis libero?</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi
+        velit impedit praesentium eius nobis, labore ullam nemo debitis, cumque
+        aliquam at, culpa inventore blanditiis. Commodi quo rem nobis libero?
+      </p>
     </div>
 
     <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi velit impedit praesentium eius nobis, labore ullam nemo debitis, cumque aliquam at, culpa inventore blanditiis. Commodi quo rem nobis libero?</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi
+        velit impedit praesentium eius nobis, labore ullam nemo debitis, cumque
+        aliquam at, culpa inventore blanditiis. Commodi quo rem nobis libero?
+      </p>
     </div>
+
+    <section>
+      <div class="news">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore amet
+        ex doloremque earum magnam dolore, dolorem velit ratione sed sunt
+        cupiditate culpa architecto quaerat dolor accusamus quisquam.
+        Blanditiis, pariatur beatae?
+      </div>
+      <div class="news">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore amet
+        ex doloremque earum magnam dolore, dolorem velit ratione sed sunt
+        cupiditate culpa architecto quaerat dolor accusamus quisquam.
+        Blanditiis, pariatur beatae?
+      </div>
+      <div class="news">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore amet
+        ex doloremque earum magnam dolore, dolorem velit ratione sed sunt
+        cupiditate culpa architecto quaerat dolor accusamus quisquam.
+        Blanditiis, pariatur beatae?
+      </div>
+    </section>
 
     <div id="div3">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi velit impedit praesentium eius nobis, labore ullam nemo debitis, cumque aliquam at, culpa inventore blanditiis. Commodi quo rem nobis libero?</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi
+        velit impedit praesentium eius nobis, labore ullam nemo debitis, cumque
+        aliquam at, culpa inventore blanditiis. Commodi quo rem nobis libero?
+      </p>
     </div>
-    
+
+    <div id="list">
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+    </div>
+
+    <button onclick=removeList()>Remove list item</button>
+
     <script>
 
-const body = document.body
+        //try to implement css with help of dom
+        //try to target elements with query selector and also add css to them
 
-document.getElementById("div3").after(createTable())
+        //BOM methods 
 
-function createTable() {
+        
+        // remove child node by dom 
+        // use removeChild() 
+        // syntax - parentNode.removeChild(childNodeName)
 
-    var table = document.createElement("table");
-    var row = document.createElement("tr");
+        function removeList() {
+            let list = document.getElementById("list")
 
-    let taskHeadCell = document.createElement("th")
-    let scheduleHeadCell = document.createElement("th")
-
-    body.appendChild(table)
-
-    table.appendChild(row);
-
-    row.appendChild(taskHeadCell)
-
-    row.appendChild(scheduleHeadCell)
-
-
-    taskHeadCell.append("Task")
-
-    scheduleHeadCell.append("Schedule")
+            // document.removeChild("ul")
+        }
 
 
 
+let news = document.getElementsByClassName("news")
+//let paraElements = document.getElementsByTagName("p")
+let paraElements = document.querySelectorAll("p")
+
+console.log(news)
+console.log(paraElements)
+
+      let h2 = document.querySelector("h2");
+
+      h2.setAttribute("id", "heading");
+
+      console.log(h2);
+
+      let p = document.getElementById("pOne")
+
+      //let p = document.querySelector("para");
+
+      p.style.width = "450px";
+      p.style.color = "green";
+      p.style.backgroundColor = "gray";
 
 
+      let x = p.getAttributeNames()
+      console.log(x)
 
-}
+      p.classList.add("text", "p-shadow")
+      p.classList.remove("para")
+      p.classList.toggle("t-class", false)
 
+     
 
-function createParagraph() {
+      
 
-    var paragrapgh = document.createElement("p")
-    var para2 = document.createElement("p");
+      const body = document.body;
 
-    var link = document.createElement("a")
+      document.getElementById("div3").after(createTable());
 
-    var href = document.createAttribute("href")
+      document.querySelector("#div3");
 
+      function createTable() {
+        var table = document.createElement("table");
+        var row = document.createElement("tr");
 
-   
+        let taskHeadCell = document.createElement("th");
+        let scheduleHeadCell = document.createElement("th");
 
-    body.append(paragrapgh)
+        body.appendChild(table);
 
-    body.append(para2)
+        table.appendChild(row);
 
-    paragrapgh.append("Codekul")
+        row.appendChild(taskHeadCell);
 
-    para2.appendChild(link)
+        row.appendChild(scheduleHeadCell);
 
-    //link.appendChild("Go To Codekul")
+        taskHeadCell.append("Task");
 
-    link.append("Go To Codekul")
+        scheduleHeadCell.append("Schedule");
+      }
 
-    link.setAttribute("href", "http://www.codekul.com")
+      function createParagraph() {
+        var paragrapgh = document.createElement("p");
+        var para2 = document.createElement("p");
 
+        var link = document.createElement("a");
 
-    
+        var href = document.createAttribute("href");
 
-    // append method append() 
-    // syntax - parentNode.append(childNode)
+        body.append(paragrapgh);
 
-}
+        body.append(para2);
+
+        paragrapgh.append("Codekul");
+
+        para2.appendChild(link);
+
+        //link.appendChild("Go To Codekul")
+
+        link.append("Go To Codekul");
+
+        link.setAttribute("href", "http://www.codekul.com");
+
+        // append method append()
+        // syntax - parentNode.append(childNode)
+      }
     </script>
-</body>
+  </body>
 </html>
