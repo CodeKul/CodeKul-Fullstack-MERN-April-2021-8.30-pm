@@ -93,9 +93,31 @@
         // syntax - parentNode.removeChild(childNodeName)
 
         function removeList() {
-            let list = document.getElementById("list")
+            //let list = document.getElementById("list")
+
+            let list = document.querySelector("li:last-child")
+
+            //list.parentElement.removeChild(list)
+            //document.remove(list)
+
+            //list.remove()
+
+            // syntax - 
+            // targettingElement.remove()
+            // parentElement.removeChild(targetingElement)
+
 
             // document.removeChild("ul")
+
+            //replacing Node 
+            //syntax - 
+            //parentNode.replaceChild(newNode, oldNode)
+let p = document.createElement("span")
+p.innerHTML="Hello element replaced"
+let z = document.createTextNode("Hey, This is Text Node")
+p.appendChild(z)
+
+            list.parentElement.replaceChild(p, list)
         }
 
 

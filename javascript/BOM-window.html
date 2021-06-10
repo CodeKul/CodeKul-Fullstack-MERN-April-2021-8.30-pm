@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Open Ad</button>
+    <button id="btn2">Another Ad</button>
+    <button id="closebtn">Close</button>
+
+
+    <script>
+        //window.alert()
+//alert()
+//We can use window object methods directly without referencing the window object
+//because window is a global object
+
+
+        //window.alert("Hello Welcome to BOM concepts")
+
+        //let value = confirm("Are you Sure ?")
+
+      //  console.log(value)
+
+       // let x = prompt("Enter your age..")
+
+      //  console.log(x)
+
+        console.log(window.outerHeight)
+        console.log(window.outerWidth)
+
+        document.write(window.outerWidth)
+
+        let innerH = window.innerHeight;
+        let innerW = window.innerWidth;
+
+        console.log(innerH, innerW)
+
+        let winIZd;
+        let btn = document.getElementById("btn")
+        btn.addEventListener("click", () => {
+            winId = window.open("https://www.indiatoday.in/", "ad", "height=500, width=400")
+        })
+
+       // syntax - window.open(url, name, features)
+    
+       let btn2 = document.getElementById("btn2")
+       btn2.addEventListener("click", ()=> {
+           window.open("https://www.bbc.com", "bbc", "height=500, width=400")
+       })
+
+       let closebtn = document.getElementById("closebtn");
+       closebtn.addEventListener("click", function close() {
+           winId.close()
+       })
+
+    </script>
+</body>
+</html>
