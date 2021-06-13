@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-    <p onkeypress=changBgColor() onclick=changeContent() id="demo">Hello</p>
+  </head>
+  <body>
+    <p onkeypress="changBgColor()" onclick="changeContent()" id="demo">Hello</p>
 
-    <input id="inp" onfocus=changeBgColor(this) type="text">
+    <input id="inp" onfocus="changeBgColor(this)" type="text" />
+
+    <div id="container" >
+      
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci optio
+        ab vel placeat voluptate culpa enim natus nobis obcaecati libero iusto
+        nostrum ratione, excepturi distinctio, eligendi accusantium sint odio
+        maiores.
+      
+    </div>
 
     <script>
-function changeContent () {
-    let demo = document.getElementById("demo")
-    demo.innerHTML = "Hi , The Text is changed"
-}
 
-function changeBgColor(x) {
-let input = document.getElementById("inp")
+var container = document.getElementById("container")
 
-input.style.borderBottomStyle="hidden"
-input.style.borderTopStyle ="hidden"
-input.style.borderLeftStyle="hidden"
-input.style.borderRightStyle="hidden"
-input.style.outline="none"
-}
+container.addEventListener("click", function changeThings() {
+    container.style.backgroundColor = "lightblue"
+    container.style.color = "red"
+})
+
+let change = container.addEventListener("click",   () =>  {
+       
+        container.innerHTML = "Hi , The Text is changed";
+      })
+
+
+      container.removeEventListener("click", change() )
+
+
+
+
+
+      function changeContent() {
+        let demo = document.getElementById("demo");
+        demo.innerHTML = "Hi , The Text is changed";
+      }
+
+      function changeBgColor(x) {
+        let input = document.getElementById("inp");
+
+        input.style.borderBottomStyle = "hidden";
+        input.style.borderTopStyle = "hidden";
+        input.style.borderLeftStyle = "hidden";
+        input.style.borderRightStyle = "hidden";
+        input.style.outline = "none";
+      }
     </script>
-</body>
+  </body>
 </html>
