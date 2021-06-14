@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+.text{
+    display: inline-block;
+    width: 400px;
+    font-weight: 600;
+}
+
+
+        .result {
+            color: red;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .inner-inner-container{
+            width: 100px;
+            height: 50px;
+            background-color: rgb(255, 94, 0);
+            margin: 10px;
+
+        }
+        .container{
+            display: inline-block;
+            width: 400px;
+            height: 300px;
+            background-color: blue;
+        }
+
+
+        .inner-container{
+           
+            width: 200px;
+            height: 100px;
+            background-color: rgb(81, 255, 0);
+            margin: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        Outer container 
+
+        <div class="inner-container">
+            Inner container
+
+            <div class="inner-inner-container">
+                Inner Inner container
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        Outer container
+
+        <div class="inner-container">
+            Inner container
+
+
+            <div class="inner-inner-container">
+                Inner Inner container
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="text">Bubbling</div>
+    <div class="text">Capturing</div>
+
+    <div class="result"></div>
+
+
+    <script>
+
+        let outerDiv = document.querySelectorAll(".container");
+        let innerDiv = document.querySelectorAll(".inner-container");
+
+        let inner2Div = document.querySelectorAll(".inner-inner-container")
+console.log(outerDiv)
+        let resultDiv = document.querySelector(".result");
+
+        inner2Div[0].addEventListener("click", ()=> {
+            resultDiv.innerHTML = ""
+            resultDiv.innerHTML += "Inner Inner Div has been clicked" + "<br>"
+        },)
+
+
+        inner2Div[1].addEventListener("click", ()=> {
+            resultDiv.innerHTML += "Inner Inner Div has been clicked" + "<br>"
+        }, true)
+
+        outerDiv[0].addEventListener("click", () => {
+            resultDiv.innerHTML += "Outer Div has been clicked" + "<br>";
+        })
+
+        innerDiv[0].addEventListener("click", () => {
+            resultDiv.innerHTML = ""
+            resultDiv.innerHTML += "Inner div has been clicked" + "<br>"
+        })
+
+outerDiv[1].addEventListener("click", () => {
+    resultDiv.innerHTML = ""
+    resultDiv.innerHTML += "Outer Div has been clicked" + "<br>";
+}, true)
+        innerDiv[1].addEventListener("click", () => {
+            resultDiv.innerHTML += "Inner div has been clicked" + "<br>"
+        }, true)
+    </script>
+</body>
+</html>
