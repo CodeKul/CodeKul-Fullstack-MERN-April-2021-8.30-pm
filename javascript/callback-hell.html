@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+// function getVegetables() {
+//     console.log("Getting vegetables")
+// }
+
+// function getMeat() {
+//     console.log("Getting Meat...")
+// }
+
+// function getMasala() {
+//     console.log("Put masala in Biryani")
+// }
+
+// function mixAll(x,y,z) {
+//     console.log("Mix all ingridients")
+
+// }
+
+// function marinateMeat(meat) {
+//     console.log("Marinate the meat..")
+// }
+
+//         const makeBiryani = () => {
+//             const vegetables = getVegetables();
+//             const meat = getMeat();
+//             const marinate = marinateMeat(meat);
+//             const masala = getMasala();
+//             const biryani = mixAll(vegetables, marinate, masala);
+//             console.log("Biryani in Making...")
+//             return biryani;
+//         }
+
+//         const plate = makeBiryani();
+//         serve(plate);
+
+//         function serve(a){
+//             console.log("Biryani is ready on plate...")
+//         }
+
+
+        const makeBiryani = () => {
+            serveBiryani(function(mixAll) {
+                cookBiryani(mixIngridients, function getMeat(meat) {
+                    console.log("Biryani is ready on plate..")
+                }, function getVegetables(cookVegetables){
+                    console.log("Vegetables are cooked")
+                }, function  (marinateMeat()))
+
+                
+            })
+        }
+
+    </script>
+</body>
+</html>

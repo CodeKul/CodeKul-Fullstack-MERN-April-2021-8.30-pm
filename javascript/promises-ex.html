@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const second = () => {
+            setTimeout(() => {
+                console.log("download image taskes 2 seconds")
+
+            }, 2000)
+        }
+
+        const first = () => {
+            console.log("first function was called")
+            second();
+            console.log("the code is still executing")
+        }
+
+        first();
+
+
+        // const getEmployeeIds = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve([2,34,5,6]);
+        //     },1500)
+
+        // })
+
+        function multiply(x,y) {
+            let output = x*y;
+            let promise = new Promise(function (resolve, reject) {
+                if (output > 0) {
+                    resolve(output)
+                } else {
+                    reject("Please try once more")
+                }
+            })
+
+            return promise;
+        }
+
+
+        multiply(5,4)
+        .then(
+            function (output) {
+                output = output +3000
+                console.log(output)
+                return output
+            }
+        )
+
+        // .then( 
+        //     function (output) {
+        //         console.log(output)
+        //     }
+        // )
+
+        .catch (
+            function (response) {
+                console.log(response)
+            }
+        )
+
+    </script>
+</body>
+</html>
