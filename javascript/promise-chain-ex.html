@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    
+    //promise chaining - then method always returns a new promise
+    // we can chain promises with precise control over how and where 
+    //errors are handled
+
+
+    // const promise = new Promise(function(resolve, error) {
+    //     const x = 200;
+    //     const y = "200"
+
+    //     if(x===y) {
+    //         resolve("Success");
+    //     } else {
+    //         error("Error")
+    //     }
+    // })
+
+
+    //consuming a promise is done by registering function using .then and .catch methods
+    //.then method for the part which it is fulfilling the condition or the resolving the output
+    //catch method is used for the rejected or error part of the promise
+    
+    // promise.then(function () {
+    //     console.log("Succes, Both values are matched")
+    // }).catch(function() {
+    //     console.log("Error, values dont match")
+    // })
+
+
+    function getUser(userId) {
+        return new Promise ((resolve, reject) => {
+            console.log("Get User Id from Database...");
+
+            setTimeout(() => {
+                resolve({
+                    userId: userId,
+                    username: "admin"
+                });
+            }, 1500)
+
+        })
+    }
+
+
+
+    function getServices(user) {
+        return new Promise((resolve, reject) => {
+            console.log(`Get the services of ${user.username} from the API`)
+        
+            setTimeout(() => {
+                resolve(["Email", "VPN", "CDN", "SDN", "SW_TOOLS"])
+            }, 2000)
+        
+        })
+    }
+
+
+    function getServicesCost(services) {
+        return new Promise((resolve, reject) => {
+            console.log(`Calculate the services cost of ${services} from the API`);
+
+            setTimeout(()=> {
+                resolve(services.length *500);
+            }, 3000)
+        })
+    }
+
+
+    getUser(123)
+    .then(getServices)
+    .then(getServicesCost)
+    .then(console.log)
+    
+
+
+    
+    </script>
+</body>
+</html>
