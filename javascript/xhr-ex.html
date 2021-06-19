@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+let xhr = new XMLHttpRequest();
+
+//syntax of xhr --> xhr.open(method, URL, [async, user, password])
+
+//method - GET , POST
+
+//xhr.send([body])
+
+
+//configure xhr 
+xhr.open("GET", "https://jsonplaceholder.typicode.com/photos")
+
+
+xhr.send()     //xhr.send() sends the XMLHttpRequest
+
+
+xhr.onload = function() {
+    if (xhr.status != 200) {
+        alert(`Error ${xhr.status}:  ${xhr.statusText}`)
+    } else {
+        alert (`Done, got ${xhr.response.length} bytes`)
+    }
+}
+
+xhr.onprogress = function (event) {
+    if (event.lengthComputable) {
+        alert(`Recieved ${event.loaded} of ${event.total} bytes`)
+        console.log(event)
+    } else {
+        alert(`Recieved ${event.loaded} bytes`)
+    }
+
+}
+
+xhr.onerror = function () {
+    alert("Request Failed")
+}
+
+xhr.onload = function getPhotos() {
+
+    if(xhr.status == 200) {
+        let res = xhr.response;
+        let result = JSON.parse(res)
+        console.log(result);
+        console.log(res)
+        result.map((item, id) => {
+
+            `${item.id}`
+
+        });
+    }
+    
+   
+}
+
+console.log(xhr)
+    </script>
+</body>
+</html>
