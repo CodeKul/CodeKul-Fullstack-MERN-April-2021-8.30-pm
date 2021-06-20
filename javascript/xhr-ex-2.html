@@ -5,13 +5,137 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+    <style>
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
 
+    <form action="">
+        <label for="postId">Post Id</label>
+        <input type="number" name="postId" id="postId"> <br> <br>
+
+        <label for="personName">Name</label>
+        <input type="text" name="personName" id="personName"> <br> <br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"> <br> <br>
+
+        <label for="content">comments</label>
+        <textarea cols="30" rows="4" name="content" id="content"> </textarea> <br> <br>
+
+            <button type="button" onclick=sendComment()>Post Comment</button>
+            <button type="button" onclick=getAllComments()>Get comments</button>
+    </form>
+
+    <div id="output"></div>
+    <p id="msg"></p>
+
 
     <script>
+
+    
 function getCommentData() {
-    let postId = document.getElementById("postId").value
+    let postId = document.getElementById("postId").value;
+    let email = document.getElementById("email").value;
+    let personName = document.getElementById("personName").value;
+    let comment = document.getElementById("content").value;
+
+
+    let commentPost = {
+        postId: postId,
+        email: email,
+        personName: personName,
+        comment: comment,
+    };
+
+    return commentPost;
+}
+
+
+function sendComment() {
+    let commentData = getCommentData()
+
+    console.log(commentData);
+
+
+    // 1.create the objof XMLHttpRequest 
+    // 2. configure xhr obj -> obj.open(method, url)
+    // 3. set the header request -> obj.setRequestheader("content-type", "application/json")
+    // 4. send the xhr request -> obj.send(commentData) JSON.stringify(commentData)
+    // 5. obj.onload and obj.onerror statements on events
+
+
+    let req = new XMLHttpRequest();
+    req.open("POST", "https://jsonplaceholder.typicode.com/comments")
+    req.setRequestHeader("content-type", "application/json");
+    req.send(JSON.stringify(commentData));
+    req.onload = function () {
+        if(req.status == 201) {
+            console.log(req.response);
+            console.log("Submitted Succesfully");
+        } else {
+            console.log(req.status)
+        }
+    };
+
+    req.onerror = function () {
+        console.log("Network Error!! Try again later")
+    }
+}
+
+function getAllComments() {
+    let commentReq = new XMLHttpRequest();
+
+    commentReq.open("GET", "https://jsonplaceholder.typicode.com/comments");
+    commentReq.setRequestHeader("content-type", "application/json");
+    commentReq.send();
+
+    //to access response syntax -> xhrobj.response
+
+    commentReq.onload = function () {
+        if(commentReq.status == 200) {
+            let res = commentReq.response;
+
+            let result = JSON.parse(res);
+
+            console.log(result);
+
+            let commentsTable = `
+            <table>
+
+                <tr>
+                    <th> Post Id </th>
+                    <th> ID </th>
+                    <th> Name </th>
+                    <th> Email </th>
+                    <th> Comment</th>
+                    </tr>
+
+               
+            `
+
+            result.map((item, id) => {
+                commentsTable += `
+                <tr>
+                    <td> ${item.postId}</td>
+                    <td> ${item.id}</td>
+                    <td> ${item.name}</td>
+                    <td> ${item.email}</td>
+                    <td> ${item.body}</td>                 
+                    </tr>`
+            });
+
+            console.log(commentsTable);
+            document.getElementById("output").innerHTML = commentsTable;
+        }
+    }
 }
     </script>
 </body>
