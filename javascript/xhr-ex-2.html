@@ -38,105 +38,109 @@
     <p id="msg"></p>
 
 
+
+    <!-- <script src="xhr-ex.js"></script> -->
+
+    <script src="fetch-ex.js"></script>
     <script>
 
     
-function getCommentData() {
-    let postId = document.getElementById("postId").value;
-    let email = document.getElementById("email").value;
-    let personName = document.getElementById("personName").value;
-    let comment = document.getElementById("content").value;
+// function getCommentData() {
+//     let postId = document.getElementById("postId").value;
+//     let email = document.getElementById("email").value;
+//     let personName = document.getElementById("personName").value;
+//     let comment = document.getElementById("content").value;
 
 
-    let commentPost = {
-        postId: postId,
-        email: email,
-        personName: personName,
-        comment: comment,
-    };
+//     let commentPost = {
+//         postId: postId,
+//         email: email,
+//         personName: personName,
+//         comment: comment,
+//     };
 
-    return commentPost;
-}
-
-
-function sendComment() {
-    let commentData = getCommentData()
-
-    console.log(commentData);
+//     return commentPost;
+// }
 
 
-    // 1.create the objof XMLHttpRequest 
-    // 2. configure xhr obj -> obj.open(method, url)
-    // 3. set the header request -> obj.setRequestheader("content-type", "application/json")
-    // 4. send the xhr request -> obj.send(commentData) JSON.stringify(commentData)
-    // 5. obj.onload and obj.onerror statements on events
+// function sendComment() {
+//     let commentData = getCommentData()
+
+//     console.log(commentData);
 
 
-    let req = new XMLHttpRequest();
-    req.open("POST", "https://jsonplaceholder.typicode.com/comments")
-    req.setRequestHeader("content-type", "application/json");
-    req.send(JSON.stringify(commentData));
-    req.onload = function () {
-        if(req.status == 201) {
-            console.log(req.response);
-            console.log("Submitted Succesfully");
-        } else {
-            console.log(req.status)
-        }
-    };
+//     // 1.create the objof XMLHttpRequest 
+//     // 2. configure xhr obj -> obj.open(method, url)
+//     // 3. set the header request -> obj.setRequestheader("content-type", "application/json")
+//     // 4. send the xhr request -> obj.send(commentData) JSON.stringify(commentData)
+//     // 5. obj.onload and obj.onerror statements on events
 
-    req.onerror = function () {
-        console.log("Network Error!! Try again later")
-    }
-}
 
-function getAllComments() {
-    let commentReq = new XMLHttpRequest();
+//     let req = new XMLHttpRequest();
+//     req.open("POST", "https://jsonplaceholder.typicode.com/comments")
+//     req.setRequestHeader("content-type", "application/json");
+//     req.send(JSON.stringify(commentData));
+//     req.onload = function () {
+//         if(req.status == 201) {
+//             console.log(req.response);
+//             console.log("Submitted Succesfully");
+//         } else {
+//             console.log(req.status)
+//         }
+//     };
 
-    commentReq.open("GET", "https://jsonplaceholder.typicode.com/comments");
-    commentReq.setRequestHeader("content-type", "application/json");
-    commentReq.send();
+//     req.onerror = function () {
+//         console.log("Network Error!! Try again later")
+//     }
+// }
 
-    //to access response syntax -> xhrobj.response
+// function getAllComments() {
+//     let commentReq = new XMLHttpRequest();
 
-    commentReq.onload = function () {
-        if(commentReq.status == 200) {
-            let res = commentReq.response;
+//     commentReq.open("GET", "https://jsonplaceholder.typicode.com/comments");
+//     commentReq.setRequestHeader("content-type", "application/json");
+//     commentReq.send();
 
-            let result = JSON.parse(res);
+//     //to access response syntax -> xhrobj.response
 
-            console.log(result);
+//     commentReq.onload = function () {
+//         if(commentReq.status == 200) {
+//             let res = commentReq.response;
 
-            let commentsTable = `
-            <table>
+//             let result = JSON.parse(res);
 
-                <tr>
-                    <th> Post Id </th>
-                    <th> ID </th>
-                    <th> Name </th>
-                    <th> Email </th>
-                    <th> Comment</th>
-                    </tr>
+//             console.log(result);
+
+//             let commentsTable = `
+//             <table>
+
+//                 <tr>
+//                     <th> Post Id </th>
+//                     <th> ID </th>
+//                     <th> Name </th>
+//                     <th> Email </th>
+//                     <th> Comment</th>
+//                     </tr>
 
                
-            `
+//             `
 
-            result.map((item, id) => {
-                commentsTable += `
-                <tr>
-                    <td> ${item.postId}</td>
-                    <td> ${item.id}</td>
-                    <td> ${item.name}</td>
-                    <td> ${item.email}</td>
-                    <td> ${item.body}</td>                 
-                    </tr>`
-            });
+//             result.map((item, id) => {
+//                 commentsTable += `
+//                 <tr>
+//                     <td> ${item.postId}</td>
+//                     <td> ${item.id}</td>
+//                     <td> ${item.name}</td>
+//                     <td> ${item.email}</td>
+//                     <td> ${item.body}</td>                 
+//                     </tr>`
+//             });
 
-            console.log(commentsTable);
-            document.getElementById("output").innerHTML = commentsTable;
-        }
-    }
-}
+//             console.log(commentsTable);
+//             document.getElementById("output").innerHTML = commentsTable;
+//         }
+//     }
+// }
     </script>
 </body>
 </html>
