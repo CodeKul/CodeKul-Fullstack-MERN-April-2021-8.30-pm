@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+    crossorigin="anonymous"
+  />
+
+</head>
+<body>
+    
+
+  <div class="container">
+    <ul>
+      <li>Discover</li>
+      <li><a href="#search"> Search</a></li>
+      <li>Library</li>
+
+      <li> <a href="#poetry"> Poetry</a></li>
+      <li> <a href="#fiction">Fiction</a> </li>
+      <li><a href="#science">Science</a> </li>
+    </ul>
+  </div>
+
+  <div id="search" class="container search-container">
+    <input 
+    id="search-box"
+    type="text"
+    class="form-control"
+    >
+
+    <button 
+    onclick="getBooks()"
+    class="btn btn-primary m-2">Search</button>
+  </div>
+
+
+
+    <script src="google-books-api.js"></script>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
